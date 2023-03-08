@@ -29,7 +29,7 @@ module.exports = {
         mediumAccount: 'carbondesign',
         repository: {
           baseUrl:
-            'https://github.com/niklaushirt/cp4waiops-training',
+            'https://github.com/jorgego11/cp4waiops-training',
           subDirectory: '/',
         },
         isSwitcherEnabled: 'false',
