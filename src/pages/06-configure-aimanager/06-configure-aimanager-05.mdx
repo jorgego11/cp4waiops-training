@@ -6,7 +6,10 @@ weight: 55
 
 
 
-
+ELK (Elasticsearch, Logstash, and Kibana) is a suite of tools that function as an application log aggregation tool and its included in the OpenShift Logging library.
+Note that Kibana is a data visualization and exploration tool used for log and time-series analytics, application monitoring, and operational intelligence use cases. 
+OpenShift customers that prefer not to buy a commercial log aggregator such as Humio, Splunk, or LogDNA, more than likely will use the OpenShift Logging library that comes out of the box.
+To have the CP4WAIOps collect logs from the ELK installation that leverages the OpenShift Logging library, you need to define an this ELK integration.
 In this section you will create the integration with ELK.
 
 
@@ -64,22 +67,14 @@ Mapping:
 1. Under `ELK`, click on `Add connection`
 1. Click `Connect`
 1. Name it `ELK`
-1. 🔎 Get the data from your configuration file `MY_CONFIGURATION.txt` - section  `2.2 Configure ELK` 
-
-    ```bash
-    ./tools/11_practicum/get_configuration_info.sh > MY_CONFIGURATION.txt
-    ```
+1. 🔎 Get the data from the DEMO-UI under the Configuration tab, look for the `2.2 Configure ELK` section.
+(For "Filter" and "Field Mapping" use the values listed below)
 
 1. Fill out the fields on the first page:
 
 	![image](./../images/25_elk.png)
 
 	```yaml
-	ELK service URL: 		from MY_CONFIGURATION.txt
-	Kibana URL: 			from MY_CONFIGURATION.txt
-	Authentication type: 		Token
-	Token: 				from MY_CONFIGURATION.txt
-
 	Filter:
 		{
 		"query": {
@@ -90,9 +85,6 @@ Mapping:
 				}
 			}
 		}
-
-	TimeZone:				set to your Timezone	
-	Kibana port: 			443
 	```
 
 1. Click `Test connection`. You should get `Connection successful!`

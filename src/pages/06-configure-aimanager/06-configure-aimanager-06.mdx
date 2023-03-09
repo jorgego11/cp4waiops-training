@@ -19,10 +19,10 @@ In this section you will create the connection to Ansible Tower and create your 
 Create the connection to Ansible Tower using the following parameters:
 
 ```yaml
-URL for REST API:      from MY_CONFIGURATION.txt
+URL for REST API:      from Demo-UI
 Authentication type:   User ID/Password
 User:                  admin
-Password:              from MY_CONFIGURATION.txt
+Password:              from Demo-UI
 ```
 
 
@@ -41,21 +41,19 @@ Password:              from MY_CONFIGURATION.txt
 1. Under `Ansible Automation Controller`, click on `Add connection`
 1. Click `Connect`
 
-1. 🔎 Get the data from your configuration file `MY_CONFIGURATION.txt` - section  **2.3 Configure Runbooks - Ansible Automation Controller**
+1. 🔎 Get the data from your Demo-UI section  **Configure Runbooks - Ansible Automation Controller**
 
-    ```bash
-    ./tools/11_practicum/get_configuration_info.sh > MY_CONFIGURATION.txt
-    ```
+
 
 1. Fill out the fields:
 
 	![image](./../images/29_runbook.png)
 
 	```yaml
-	URL for REST API:      from MY_CONFIGURATION.txt
+	URL for REST API:      from Demo-UI
 	Authentication type:   User ID/Password
 	User:                  admin
-	Password:              from MY_CONFIGURATION.txt
+	Password:              from Demo-UI
 
 1. Click `Done`
 
@@ -103,11 +101,9 @@ Create a Runbook based on the `CP4WAIOPS Mitigate Robotshop Ratings Outage` Ansi
 
 1. Select tab 
 
-1. 🔎 Get the data from your configuration file `MY_CONFIGURATION.txt` - section  `2.4 Configure Runbooks - Runbook Parameters` 
+1. 🔎 Get the data from your Demo_UI section  `Configure Runbooks - Runbook Parameters` 
 
-    ```bash
-    ./tools/11_practicum/get_configuration_info.sh > MY_CONFIGURATION.txt
-    ```
+
 
 	![image](./../images/32_runbook.png)
 
