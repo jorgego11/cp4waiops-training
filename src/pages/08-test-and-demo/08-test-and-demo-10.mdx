@@ -7,7 +7,7 @@ weight: 102
 ## 📥 STEP: Understand the Incident
 
 >**🚀 <u>Action</u>**
->Click twice on the  **Last occurence** Header. 
+>Click twice on the  **Last occurrence** Header. 
 >
 >**Result**: The "Commit in repository robot-shop by Niklaus Hirt on file robot-shop.yaml" should be at the bottom* 
 
@@ -31,7 +31,8 @@ Other events are confirming the hypothesis.
 
 <div style="page-break-after: always;"></div>
 
-* Cloud Pak for Watson AIOps has learned the normal, good patterns for logs coming from the applications. The Story contains a **Log Anomaly** that has been detected in the ratings service that cannot acces the mysql database.
+* Cloud Pak for Watson AIOps has learned the normal patterns for logs coming from different applications. In this case, the Story also contains **Log Anomaly** Alerts (Summary: Abnormal behavior in the logs for component: ratings) that has been detected in the ratings service that cannot acces the mysql database. This detail is shown in the **insights.anomaly** section for the Alert **information**
+
 
 
 ## 📥 STEP: Metric Anomaly
@@ -39,7 +40,7 @@ Other events are confirming the hypothesis.
 ![image](./../images/demo/image.064.png)
 
 >**🚀 <u>Action</u>**
-Click on a Alert line that has **ANOMALY:** in the Type column. Then open the **Metric Anomaly Details** accordion. 
+Click on one Alert line that has uppercase **ANOMALY:** in the Type column. Open the **Metric Anomaly Details** accordion and finally click on **View expanded chart**.
 
 
 **📣 <u>Narration</u>**
@@ -50,7 +51,7 @@ Click on a Alert line that has **ANOMALY:** in the Type column. Then open the **
 ![image](./../images/demo/image.065.png)
 
 >**🚀 <u>Action</u>**
-(1) In **Related Alerts** select some additional alerts.
+(1) In **Related Alerts** feel free to select some additional metric Alerts. Make sure your selection has a value under the Metric column. 
 
 
 **📣 <u>Narration</u>**
@@ -60,7 +61,7 @@ You can display several alerts at the same time to better understand the tempora
 <div style="page-break-after: always;"></div>
 
 >**🚀 <u>Action</u>**
-(2) Select a portion of the graph with your mouse to zoom in
+(2) Select a portion of the graph with your mouse to zoom in.
 
 
 **📣 <u>Narration</u>**
@@ -70,12 +71,12 @@ Now let's zoom in to better see the anomalies
 ![image](./../images/demo/image.066.png)
 
 >**🚀 <u>Action</u>**
-Hover over a datapoint to show the before/after values. 
+Hover over a datapoint to show the actual metric value(s).
 
 
 **📣 <u>Narration</u>**
 
-I can clearly see that the incident caused the **Latencies** to skyrocket and the **Transactions per Seconds** are almost zero. This is yet another confirmation of the source of the problem.
+I can clearly see that the incident caused the **Latencies** to skyrocket and the **Transactions per Seconds** are almost zero. This is yet another confirmation of the root cause of the problem.
 
 >**🚀 <u>Action</u>**
 Close the Metric anomaly details view. 
