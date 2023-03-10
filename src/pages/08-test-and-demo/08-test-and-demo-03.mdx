@@ -24,7 +24,7 @@ During the demonstration, we will be using the sample application called RobotSh
 
 **>** Let’ look at the environment that we have set up. Our sample application: “RobotShop” is running as a set of microservices in a Kubernetes cluster. Typically, the Operations team maintaining such application has a collection of tools through which they collect various data types. 
 
-**>** Here we have several systems that are sending Events into WAIOPS (slide 3), like:
+**>** Here we have several systems that are sending Events into CP4WAIOps, like:
 
 - GitHub
 - Turbonomic
@@ -34,23 +34,23 @@ During the demonstration, we will be using the sample application called RobotSh
 
 Those Events are being grouped into Alerts to massively reduce the number of signals that have to be treated. We usually observe a ratio of about 98-99% of reduction. This means that out of 20'000 events we get about 200-300 Alerts that can be further prioritised.
 
-**>** WAIOPS also ingests Logs from ElasticSearch (this could be Splunk or other Log Aggregators). The Log Anomaly detection is trained on a well running system and is able to detect anomalies and outliers. If an Anomaly is detected it will be grouped with the other Events.
+**>** CP4WAIOps also ingests Logs from ElasticSearch (this could also be Splunk or other Log Aggregators). The Log Anomaly detection is trained on a well running system and is able to detect anomalies and outliers. If an Anomaly is detected it will be grouped with the other Events.
 
-**>** WAIOPS also ingests Metrics from Instana (this could be Dynatrace, NewRelic or others). The Metric Anomaly detection is trained on a well running system and creates dynamic baselines. Through different algorithms it is able to detect anomalies and outliers. If an Anomaly is detected it will also be grouped with the other Events.
+**>** CP4WAIOps also ingests Metrics from Instana (this could also be Dynatrace, NewRelic or others). The Metric Anomaly detection is trained on metrics during "normal" periods and creates dynamic baselines. Through different algorithms it is able to detect metric anomalies and outliers. If an Anomaly is detected it will also be grouped with the other Events.
 
 **>** Alerts that are relevant for the same Incident are packaged into a so called Story. The Story will be enriched and updated with information as it gets available.
 
-**>** One example is the Topology information. Not only will WAIOPS tell me that I have a problem and present all relevant Events but it will also tell me where in the system topology the problem is situated. 
+**>** One example is the Topology information. Not only will CP4WAIOps tell me that I have a problem and present all relevant Events but it will also tell me where in the system topology the problem is situated. 
 
 **>** Furthermore the Story is enriched with past resolution information coming from ServiceNow tickets. I'll explain this more in detail during the demo.
 
-**>** The Stories can either be examined in the WAIOPS web interface or can be pushed to Slack or Teams if your teams are using a ChatOps approach.
+**>** The Stories can either be examined in the CP4WAIOps web interface or can be pushed to Slack or Teams if your teams are using a ChatOps approach.
 
-**>** If Operations or SREs have created Runbooks, WAIOPS can automatically trigger a Runbook to mitigate the problem.
+**>** If Operations or SREs have created Runbooks, CP4WAIOps can automatically trigger a Runbook to mitigate or fix the problem.
 
 
 
-**ℹ️ <u>Note</u>**: We are NOT using Slack in this demo.
+**ℹ️ <u>Note</u>**: We are NOT using Slack in this Lab.
 
 
 
