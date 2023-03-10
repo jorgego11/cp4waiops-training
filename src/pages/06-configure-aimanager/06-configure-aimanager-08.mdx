@@ -55,8 +55,8 @@ Create a Kubernetes connection to create a Topology for the RoboShop application
 	Kubernetes master IP address:  	172.21.0.1
 	Kubernetes API port:           	443
 	Token:					from Demo-UI but note there is an extra character '<' at the end of the token. DO NOT include it.
-	Trust all HTTPS certificates:  	true
-	Correlate analytics events:		true
+	Trust all HTTPS certificates:  	On
+	Correlate analytics events:		On
 	Namespaces to observe:         	robot-shop
     ```
 
@@ -77,9 +77,8 @@ Create a Kubernetes connection to create a Topology for the RoboShop application
 <a href="https://www.ibm.com/docs/en/cloud-paks/cloud-pak-watson-aiops/3.6.0?topic=applications-defining-editing" target="_blank" >🌏 Documentation for the Task: Defining and editing applications</a>
 
 
-You define applications by adding Resource Groups, icons and tags, assigning business criticality levels, and setting service disruption costs.
-
-Create an application with all RobotShop related Resource Groups.
+In CP4WAIOps you define an "application" by assigning the topology resources that support or belong to the application being defined. That is, by adding Resource Groups, icons and tags, assigning business criticality levels, and setting service disruption costs.
+Create the RobotShop application with all its related Resource Groups.
 
 
 
@@ -100,6 +99,7 @@ Create an application with all RobotShop related Resource Groups.
 
 1. Enter Name `RobotShop`
 1. Click on the heart to `Mark as favorite`
+1. Select `Gold` for `Business criticality`
 1. Enter `1000` into `Estimated cost per minute for service disruption`
 
 	![image](./../images/42_topo.png)
