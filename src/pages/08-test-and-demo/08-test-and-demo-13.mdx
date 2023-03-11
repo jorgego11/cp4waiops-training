@@ -9,8 +9,7 @@ weight: 102
 ## 📥 STEP: Fixing the problem with runbook automation
 
 >**🚀 <u>Action</u>**
->
->Click on the  **Overview**  Tab.
+>Lets go back to the Story. Click the “hamburger menu” on the upper left. Click on **Operate > Stories and alerts** and select the same Story that you were looking before.
 
 
 ![image](./../images/demo/image.080.png)
@@ -19,15 +18,15 @@ weight: 102
 
 **📣 <u>Narration</u>**
 
-Now that we know what the problem is, let’s correct what has happened. A runbook has been automatically identified but have not been executed. Runbooks are guided steps that IT operations teams use to troubleshoot and resolve problems. Some organizations might call these standard operating procedures or playbooks. When an incident occurs, IBM Cloud Pak for Watson AIOps matches an appropriate runbook to the problem. The runbook can be set to run automatically when it is matched to an incident, or it can run with user approval and participation. 
+Now that we know what is going on and the root cause, let’s fix the problem. A runbook has been automatically identified but have not been executed. Runbooks are guided steps that IT operations teams use to troubleshoot and resolve problems. Some organizations might call these standard operating procedures or playbooks. When an incident occurs, IBM Cloud Pak for Watson AIOps can match an appropriate runbook to the problem at hand. The runbook can be set to run automatically when it is matched to an incident, or it can run with user approval and participation. 
 
 Let’s execute the Runbook.
 
 >**🚀 <u>Action</u>**
 >
->Click on the three dots and click **Run**
+>On the card representing the **RobotShop Mitigate MySQL Problem** runbook, click on the three dots and select **Run**
 >
->Click **Start Runbook**.
+>Then, on the **Run runbook** page, click **Start runbook** on the bottom right.
 
 
 ![image](./../images/demo/image.082.png)
@@ -46,7 +45,7 @@ Let’s execute the Runbook.
 
 **📣 <u>Narration</u>**
 
-The Runbook that I just started kicks off a Playbook on Ansible Tower. I can follow the execution as it connects to the cluster and then scales up memory for the MySQL deployment.
+The Runbook that I just started kicks off a Playbook on Ansible Tower. These Playbooks were made available after I completed the Ansible Tower integration in the previous steps. I can follow the execution as it connects to the cluster and then scales up memory for the **mysql** deployment.
 
 
 
@@ -56,9 +55,9 @@ The Runbook that I just started kicks off a Playbook on Ansible Tower. I can fol
 
 >**🚀 <u>Action</u>**
 >
->When finished, click **Complete**.
+>When finished, click **Complete**. Before providing feedback (rate the runbook), we will confirm that the ratings problem has been fixed in the RobotShop ecommerce application. 
 >
->Open the RobotShop application. Verify that ratings are correctly shown 
+>Open the RobotShop application. Verify that ratings are correctly shown.
 
 
 
@@ -80,11 +79,11 @@ Before confirming that the runbook worked as expected, I should check the RobotS
 
 **📣 <u>Narration</u>**
 
-So the runbook has resolved the problem. When I tell Watson AIOps that the Runbook worked, it will learn over time to prioritize and suggest more relevant Runbooks.
+The runbook has resolved the problem. When I tell Watson AIOps that the Runbook worked, it will help the runbook owner and other SREs validate the runbook usage and its effectiveness.
 
 <div style="page-break-after: always;"></div>
 
-## 📥 STEP: Resolve the Incident
+## 📥 STEP: Mark the Story as resolved
 
 >**🚀 <u>Action</u>**
 >Click on **Change Story Settings.**
@@ -100,7 +99,7 @@ So the runbook has resolved the problem. When I tell Watson AIOps that the Runbo
 
 **📣 <u>Narration</u>**
 
-So now as we have resolved the problem,  I will inform the development team of the problem by reopening the ServiceNow ticket and by closing the Story. 
+Now that we have resolved the problem, other IT Operations support members will see that this Story has been closed in the Story dashboard and the Slack / MS Teams collaboration interface. 
 
 
 
