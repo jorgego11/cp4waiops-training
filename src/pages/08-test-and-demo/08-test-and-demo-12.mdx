@@ -13,29 +13,17 @@ weight: 102
 >Close the **Resource Details** window 
 >
 
+**📣 <u>Narration</u>**
+
+Looking again at the topology, I can see that the **ratings** deployment runs on a kubernetes pod and also it depends on the **mysql** deployment. 
 
 
 ![image](./../images/demo/image.071a.png)
 
 
 
-**📣 <u>Narration</u>**
-
-Looking again at the topology, I can see that the **mysql** deployment is being called by the **ratings** service and that it runs on a certain kubernetes pod. 
 
 
-
-
-
-
-
->**🚀 <u>Action</u>**
->Change the number of hops to `2` and click **Render**.** 
->
->***Result**: Topology Viewer refreshes with bigger topology.*
-
-
-![image](./../images/demo/image.072a.png)
 
 
 **📣 <u>Narration</u>**
@@ -44,12 +32,24 @@ Looking again at the topology, I can see that the **mysql** deployment is being 
 
 
 
-![image](./../images/demo/image.073.png)
+>**🚀 <u>Action</u>**
+>Change the number of hops to `2` and click **Render**.** 
+>
+>***Result**: The Topology Viewer refreshes and shows a bigger topology.*
+
+
+![image](./../images/demo/image.072a.png)
+
+**📣 <u>Narration</u>**
+
+ Now I will examine the historical Alerts for the **mysql** component. I would like to see the **Alerts** that have been raised on the **mysql** resource over time. The Alerts are indicated as purple blocks in the timeline.
+
+
 
 >**🚀 <u>Action</u>**
->Right-click om mysql and select **Show last change in timeline** and check **Delta**
+>Right-click om mysql and select **Show last change in timeline**
 >
->***Result**: Topology Viewer refreshes and shows the events over time.*
+>***Result**: The Topology Viewer refreshes and shows the Alerts that happen over time on the mysql resource*
 
 
 
@@ -59,7 +59,29 @@ Looking again at the topology, I can see that the **mysql** deployment is being 
 
 **📣 <u>Narration</u>**
 
- Now I will examine the historical Alerts for the **mysql** component. I can see the **Alerts** that have been raised on the **mysql** resource over time.
+ Now, in addition to the Alerts, I would like to confirm that changes has been done to the mysql deployment. I know that resource Property changes are indicated as green blocks in the timeline. I can go back in time with the slider until I see a green block.
 
 
 
+>**🚀 <u>Action</u>**
+>Select the mysql resource (you may need to zoom in one time to find the mysql resource) and double click on the very left of the slider until you see a green block.
+
+![image](./../images/demo/slider-help.png)
+
+
+>**🚀 <u>Action</u>**
+>After you see a green block indicating resource changes, turn **Delta** on (top right) so we can actually select two points in time in the slider. You will now see two time selectors on the slider. Make sure that they are located before and after the green box and that the mysql resource is selected.
+
+![image](./../images/demo/before-after.png)
+
+
+>**🚀 <u>Action</u>**
+>Now lets confirm that properties have changed in the mysql resource by right-click on the resource and selecting **Resource details**. 
+>***Result**: The **Resource details** window shows property changes (blue rows) between the two points in time that you selected in the slider. 
+
+![image](./../images/demo/compare-properties.png)
+
+
+**📣 <u>Narration</u>**
+
+ Because CP4WAIOps let me see the Alerts and historical changes that happen to the topology resources, I can quickly confirm the root cause of the incident at hand. 
