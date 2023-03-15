@@ -24,10 +24,10 @@ Create the ELK Integration with the following parameters:
 
 
 ```yaml
-ELK service URL: 		from MY_CONFIGURATION.txt
-Kibana URL: 			from MY_CONFIGURATION.txt
-Authentication type: 		Token
-Token: 				from MY_CONFIGURATION.txt
+ELK service URL: 		from the Demo-UI
+Kibana URL: 			from the Demo-UI
+Authentication type: 	Token
+Token: 					from the Demo-UI
 
 Filter:
 {
@@ -69,7 +69,7 @@ Mapping:
 1. Click `Connect`
 1. Name it `ELK`
 1. 🔎 Get the data from the Demo-UI under the Configuration tab, look for the `2.2 Configure ELK` section.
-(NOTE: For "Filter" and "Field Mapping" use the values listed below instead)
+(**NOTE:** For "Filter" and "Field Mapping" use the values listed in this page)
 
 1. Fill out the fields on the first page:
 
@@ -77,16 +77,16 @@ Mapping:
 
 1. Fill out the `Filter` field:
 
-	```yaml
-		{
-		"query": {
-			"bool": {
-				"must": {
-					"term" : { "kubernetes.namespace_name" : "robot-shop" }
-				}
-				}
-			}
-		}
+	```
+{
+ "query": {
+  "bool": {
+   "must": {
+    "term" : { "kubernetes.namespace_name" : "robot-shop" }
+   }
+  }
+ }
+}
 	```
 
 1. Click `Test connection`. You should get `Connection successful!`
@@ -97,7 +97,7 @@ Mapping:
 
 1. Fill out the `Field mapping`:
 
-    ```yaml
+    ```
 	{ 
 	"codec": "elk",
 	"message_field": "message",
