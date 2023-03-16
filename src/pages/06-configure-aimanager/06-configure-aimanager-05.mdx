@@ -69,7 +69,7 @@ Mapping:
 1. Click `Connect`
 1. Name it `ELK`
 1. 🔎 Get the data from the Demo-UI under the Configuration tab, look for the `2.2 Configure ELK` section.
-(**NOTE:** For "Filter" and "Field Mapping" use the values listed in this page)
+(**NOTE: For "Filter" and "Field Mapping" use the values listed in this page. Do not use the values from the Demo-UI**)
 
 1. Fill out the fields on the first page:
 
@@ -77,7 +77,7 @@ Mapping:
 
 1. Fill out the `Filter` field:
 
-	```
+```yaml
 {
  "query": {
   "bool": {
@@ -87,7 +87,7 @@ Mapping:
   }
  }
 }
-	```
+```
 
 1. Click `Test connection`. You should get `Connection successful!`
 
@@ -97,7 +97,7 @@ Mapping:
 
 1. Fill out the `Field mapping`:
 
-    ```
+```yaml
 	{ 
 	"codec": "elk",
 	"message_field": "message",
@@ -106,7 +106,7 @@ Mapping:
 	"rolling_time": 10,
 	"timestamp_field": "@timestamp"
 	}
-    ```
+```
 
 1. Click `Next`
 
